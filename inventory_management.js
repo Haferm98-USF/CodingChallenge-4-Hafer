@@ -38,3 +38,14 @@ function updateStock(input, unitsSold)
     else 
         console.log("Low Stock")
 };
+//Task 4: Create a Function to Check Low Stock Products
+
+function calculateInventoryValue
+{
+    let inventoryValue = 0;
+    for (let i = 0; i < inventory.length; i++)
+    {
+        inventoryValue += inventory[i].price * inventory[i].quantity;
+    }
+console.log('Total Value of Inventory: $' + inventoryValue);
+}
