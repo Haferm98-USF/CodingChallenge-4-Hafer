@@ -12,7 +12,7 @@ let inventory = [
 // Task 2: Create displayProductDetails function
 function displayProductDetails(input)
 {
-    let productDetails = inventory.rind(element => element.name = input);
+    let productDetails = inventory.find(element => element.name = input);
     console.log("Product: " + productDetails.name)
     console.log("Price: $" + productDetails.price)
     console.log("Quantity: " + productDetails.quantity)
@@ -21,7 +21,20 @@ function displayProductDetails(input)
         console.log("In Stock")
     else    
         console.log("Low Stock")   
-} ;
+};
 
-displayProductDetails(goPro);
+console.log(displayProductDetails(input,));
 
+//Task 3: Create a Function to Update Product stock after Sales
+
+function updateStock(input, unitsSold)
+{
+    let product = inventory.find(element => element.name = input);
+    product.quantity -= unitsSold;
+    if (productDetails.quantity > productDetails.lowStockLevel)
+        console.log("In Stock")
+    else if (productDetails.quantity = 0)
+        console.log("Out of Stock")  
+    else 
+        console.log("Low Stock")
+};
