@@ -1,11 +1,11 @@
 // Task 1: Initialize inventory with product objects
 
 let inventory = [
-    {name: "goPro", price: 89.99, quantity: 50, lowStockLevel: 8},
-    {name: "Lenovo Laptop", price: 799.99, quantity: 40, lowStockLevel: 5}, 
-    {name: "Speaker Bar", price: 199.99, quantity: 25, lowStockLevel: 4}, 
-    {name: "Apple Watch", price: 399.99, quantity: 45, lowStockLevel: 8}, 
-    {name: "Sony Television", price: 649.99, quantity: 11, lowStockLevel: 6}];
+    {name: goPro, price: 89.99, quantity: 50, lowStockLevel: 8},
+    {name: lenovoLaptop, price: 799.99, quantity: 40, lowStockLevel: 5}, 
+    {name: speakerBar, price: 199.99, quantity: 25, lowStockLevel: 4}, 
+    {name: appleWatch, price: 399.99, quantity: 45, lowStockLevel: 8}, 
+    {name: sonyTelevision, price: 649.99, quantity: 11, lowStockLevel: 6}];
 
    
 
@@ -59,3 +59,14 @@ function calculateInventoryValue()
 console.log('Total Value of Inventory: $' + inventoryValue);
 };
 
+//Task 6: Create a Function to Process a Sale
+
+function processSale(input, unitsSold) 
+{
+    let productDetails = inventory.find(element => element.name = input);
+    if (productDetails <= 0)
+        console.log("This Item is Out of Stock")
+    else     
+    updateStock(input, unitsSold);
+}
+console.log(processSale(appleWatch, 2));
